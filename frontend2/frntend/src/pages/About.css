@@ -1,0 +1,212 @@
+.about-page {
+  padding-top: 80px; /* Account for navbar */
+}
+
+.about-header {
+  padding: 6rem 0 3rem;
+  background: linear-gradient(to bottom, rgba(10, 10, 31, 0.8), rgba(10, 10, 31, 1));
+  text-align: center;
+}
+
+.about-mission {
+  padding: 5rem 0;
+  background: linear-gradient(to bottom, rgba(10, 10, 31, 1), rgba(26, 26, 63, 0.8));
+}
+
+.mission-image {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.placeholder-image {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #1a1a3f 0%, #0a0a1f 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.placeholder-image::before {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(78, 84, 255, 0) 0%,
+    rgba(78, 84, 255, 0.1) 50%,
+    rgba(78, 84, 255, 0) 100%
+  );
+  transform: rotate(45deg);
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% {
+    top: -100%;
+    left: -100%;
+  }
+  100% {
+    top: 100%;
+    left: 100%;
+  }
+}
+
+.about-why {
+  padding: 5rem 0;
+  background: linear-gradient(to bottom, rgba(26, 26, 63, 0.8), rgba(10, 10, 31, 1));
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.why-card {
+  background: rgba(26, 26, 63, 0.7);
+  border: 1px solid var(--accent-color);
+  border-radius: 10px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.why-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(78, 84, 255, 0.3);
+}
+
+.why-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.why-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+}
+
+.why-card p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+.about-quote {
+  padding: 5rem 0;
+  background: linear-gradient(to bottom, rgba(10, 10, 31, 1), rgba(26, 26, 63, 0.8));
+}
+
+.quote-box {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 3rem;
+}
+
+.quote-box blockquote {
+  font-size: 2rem;
+  font-family: var(--font-primary);
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.quote-box blockquote::before,
+.quote-box blockquote::after {
+  content: '"';
+  font-size: 4rem;
+  color: var(--accent-color);
+  position: absolute;
+  opacity: 0.3;
+}
+
+.quote-box blockquote::before {
+  top: -2rem;
+  left: -2rem;
+}
+
+.quote-box blockquote::after {
+  bottom: -4rem;
+  right: -2rem;
+}
+
+.quote-box cite {
+  font-size: 1.2rem;
+  color: var(--accent-color);
+  font-style: normal;
+}
+
+.about-cta {
+  padding: 5rem 0;
+  background: linear-gradient(to bottom, rgba(26, 26, 63, 0.8), rgba(10, 10, 31, 1));
+}
+
+.cta-box {
+  background: rgba(26, 26, 63, 0.7);
+  border: 1px solid var(--accent-color);
+  border-radius: 10px;
+  padding: 3rem;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 0 30px rgba(78, 84, 255, 0.3);
+}
+
+.cta-box h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--accent-color);
+}
+
+.cta-box p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: var(--text-secondary);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .mission-image {
+    height: 300px;
+    margin-top: 2rem;
+  }
+  
+  .quote-box blockquote {
+    font-size: 1.5rem;
+  }
+  
+  .quote-box blockquote::before,
+  .quote-box blockquote::after {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .quote-box {
+    padding: 2rem 1rem;
+  }
+  
+  .quote-box blockquote::before,
+  .quote-box blockquote::after {
+    display: none;
+  }
+  
+  .cta-box {
+    padding: 2rem;
+  }
+  
+  .cta-box h2 {
+    font-size: 2rem;
+  }
+}

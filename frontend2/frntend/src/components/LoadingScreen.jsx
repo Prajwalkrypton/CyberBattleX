@@ -10,24 +10,23 @@ const LoadingScreen = () => {
     const container = containerRef.current
     const letters = letterRefs.current
     
-    // Initial setup - hide all letters
     gsap.set(letters, { 
       opacity: 0,
       y: 50,
       scale: 0.5
     })
     
-    // Create the animation timeline
+    
     const tl = gsap.timeline()
     
-    // Animate the background glow
+   
     tl.to(container, {
       duration: 1,
       background: 'radial-gradient(circle at center, rgba(78, 84, 255, 0.3) 0%, rgba(10, 10, 31, 1) 70%)',
       ease: 'power2.inOut'
     })
     
-    // Animate each letter with a stagger effect
+    
     tl.to(letters, {
       duration: 0.8,
       opacity: 1,
@@ -37,7 +36,7 @@ const LoadingScreen = () => {
       ease: 'back.out(1.7)',
     }, 0.5)
     
-    // Add a pulse effect to all letters
+   
     tl.to(letters, {
       duration: 0.5,
       textShadow: '0 0 20px rgba(78, 84, 255, 1)',
@@ -51,7 +50,6 @@ const LoadingScreen = () => {
     }
   }, [])
   
-  // Create an array of letters for the title
   const titleLetters = "CYBERBATTLEX".split("")
   
   return (

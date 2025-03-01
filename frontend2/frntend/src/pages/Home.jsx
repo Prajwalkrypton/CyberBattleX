@@ -1,10 +1,9 @@
 import { useEffect, useRef } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import './Home.css'
 
-// Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger)
 
 const Home = () => {
@@ -13,50 +12,32 @@ const Home = () => {
   const subtitleRef = useRef(null)
   const buttonsRef = useRef(null)
   
+  const navigate = useNavigate() // Hook fr navgatin
+
   useEffect(() => {
-    // Hero section animations
     gsap.fromTo(
       titleRef.current,
       { opacity: 0, y: 50 },
-      { 
-        opacity: 1, 
-        y: 0, 
-        duration: 1, 
-        ease: 'power3.out',
-        delay: 0.2
-      }
+      { opacity: 1, y: 0, duration: 1, ease: 'power3.out', delay: 0.2 }
     )
-    
+
     gsap.fromTo(
       subtitleRef.current,
       { opacity: 0, y: 30 },
-      { 
-        opacity: 1, 
-        y: 0, 
-        duration: 1, 
-        ease: 'power3.out',
-        delay: 0.5
-      }
+      { opacity: 1, y: 0, duration: 1, ease: 'power3.out', delay: 0.5 }
     )
-    
+
     gsap.fromTo(
       buttonsRef.current,
       { opacity: 0, y: 30 },
-      { 
-        opacity: 1, 
-        y: 0, 
-        duration: 1, 
-        ease: 'power3.out',
-        delay: 0.8
-      }
+      { opacity: 1, y: 0, duration: 1, ease: 'power3.out', delay: 0.8 }
     )
-    
-    // Scroll animations for sections
+
     const sections = document.querySelectorAll('.home-section')
-    
+
     sections.forEach((section, index) => {
-      if (index === 0) return // Skip hero section
-      
+      if (index === 0) return 
+
       gsap.fromTo(
         section,
         { opacity: 0, y: 50 },
@@ -73,21 +54,18 @@ const Home = () => {
         }
       )
     })
-    
+
     return () => {
-      // Clean up ScrollTrigger
       ScrollTrigger.getAll().forEach(trigger => trigger.kill())
     }
   }, [])
-  
+
   return (
     <div className="home-page">
-      {/* Background elements */}
       <div className="cyber-bg"></div>
       <div className="cyber-grid"></div>
       <div className="cyber-glow"></div>
       
-      {/* Hero Section */}
       <section className="home-section hero-section" ref={heroRef}>
         <div className="container">
           <div className="hero-content">
@@ -99,24 +77,17 @@ const Home = () => {
               Master real-world skills in a dynamic, competitive environment.
             </p>
             <div className="hero-buttons" ref={buttonsRef}>
-              <button className="btn btn-primary">Get Started</button>
-              <button className="btn btn-secondary">Learn More</button>
+              <button className="btn btn-primary" onClick={() => navigate('/signup')}>
+                Get Started
+              </button>
+              <Link to="/features" className="btn btn-secondary">
+                Learn More
+              </Link>
             </div>
-          </div>
-        </div>
-        <div className="scroll-indicator">
-          <div className="mouse">
-            <div className="wheel"></div>
-          </div>
-          <div className="arrow-scroll">
-            <span></span>
-            <span></span>
-            <span></span>
           </div>
         </div>
       </section>
       
-      {/* Introduction Section */}
       <section className="home-section intro-section">
         <div className="container">
           <div className="row align-items-center">
@@ -137,7 +108,6 @@ const Home = () => {
             <div className="col-lg-6">
               <div className="cyber-image-container">
                 <div className="cyber-image cyber-border">
-                  {/* Placeholder for image - using a div with background for now */}
                   <div className="placeholder-image"></div>
                 </div>
                 <div className="cyber-image-glow"></div>
@@ -147,7 +117,6 @@ const Home = () => {
         </div>
       </section>
       
-      {/* Features Preview Section */}
       <section className="home-section features-preview-section">
         <div className="container">
           <h2 className="section-title text-center">
@@ -192,7 +161,6 @@ const Home = () => {
         </div>
       </section>
       
-      {/* Call to Action Section */}
       <section className="home-section cta-section">
         <div className="container">
           <div className="cta-content text-center">
@@ -201,7 +169,9 @@ const Home = () => {
               Start your journey to becoming a cyber warrior today. 
               Let's play, hack, and defend!
             </p>
-            <button className="btn btn-primary mt-4">Get Started Now</button>
+            <button className="btn btn-primary mt-4" onClick={() => navigate('/signup')}>
+              Get Started Now
+            </button>
           </div>
         </div>
       </section>

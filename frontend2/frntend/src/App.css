@@ -65,7 +65,7 @@
   transition: opacity 400ms, transform 400ms;
 }
 
-/* Section styles */
+/* Hero Section */
 .hero-section {
   position: relative;
   min-height: 100vh;
@@ -87,6 +87,7 @@
   font-size: 4rem;
   margin-bottom: 1.5rem;
   text-transform: uppercase;
+  color: white;
 }
 
 .hero-subtitle {
@@ -189,25 +190,25 @@
   .hero-title {
     font-size: 2.5rem;
   }
-  
+
   .hero-subtitle {
     font-size: 1.2rem;
   }
-  
+
   .hero-buttons {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .workflow-step {
     flex-direction: column;
   }
-  
+
   .step-number {
     margin-bottom: 1rem;
     margin-right: 0;
   }
-  
+
   .step-line {
     left: 40px;
     height: calc(100% - 120px);

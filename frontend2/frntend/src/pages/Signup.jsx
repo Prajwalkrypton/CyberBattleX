@@ -1,9 +1,12 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import './Signup.css'
+// const navigate = useNavigate();  // Add this inside the Signup function
+
 
 const Signup = () => {
+  const navigate = useNavigate();
   const [isSignup, setIsSignup] = useState(true)
   const [formData, setFormData] = useState({
     username: '',
@@ -38,6 +41,7 @@ const Signup = () => {
 
       if (response.ok && !isSignup) {
         localStorage.setItem('token', data.token)  // Store JWT token
+        navigate('/home')
       }
     } catch (error) {
       setMessage('Something went wrong! Try again.')

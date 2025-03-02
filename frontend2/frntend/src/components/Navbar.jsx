@@ -206,9 +206,9 @@ const Navbar = () => {
               {currentUser ? "Dashboard" : "Home"}
             </Nav.Link>
 
-            <Nav.Link as={Link} to="/features" className={`nav-link ${location.pathname === '/features' ? 'active' : ''}`}>
+            {/* <Nav.Link as={Link} to="/features" className={`nav-link ${location.pathname === '/features' ? 'active' : ''}`}>
               Features
-            </Nav.Link>
+            </Nav.Link> */}
 
             <Nav.Link as={Link} to="/workflow" className={`nav-link ${location.pathname === '/workflow' ? 'active' : ''}`}>
               Workflow
@@ -229,6 +229,11 @@ const Navbar = () => {
               </Nav.Link>
             )}
           </Nav>
+          {currentUser &&(
+            <Nav.Link as={Link} to="/features" className={`nav-link ${location.pathname === '/features' ? 'active' : ''}`}>
+            Features
+          </Nav.Link>
+          )}
 
           <div className="ms-lg-3 mt-3 mt-lg-0">
             {/* If user is logged in, show username dropdown */}

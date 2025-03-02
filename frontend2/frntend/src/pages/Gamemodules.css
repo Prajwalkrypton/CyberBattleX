@@ -1,0 +1,109 @@
+.game-modules-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to bottom, rgba(10, 10, 31, 1), rgba(26, 26, 63, 1));
+  color: white;
+  min-height: 100vh;
+  padding-bottom: 50px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.cyber-bg,
+.cyber-grid,
+.cyber-glow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.modules-header {
+  text-align: center;
+  padding: 100px 20px 40px;
+}
+
+.page-title {
+  font-size: 40px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #4e54ff, #8f94fb);
+  background-clip: text; 
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent;
+}
+
+
+.page-subtitle {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.modules-main {
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 20px;
+}
+
+.modules-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.module-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px rgba(78, 84, 255, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.module-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(78, 84, 255, 0.6);
+}
+
+.module-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.module-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.module-description {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 768px) {
+  .modules-header {
+    padding: 80px 20px 30px;
+  }
+
+  .page-title {
+    font-size: 32px;
+  }
+
+  .page-subtitle {
+    font-size: 16px;
+  }
+
+  .modules-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}

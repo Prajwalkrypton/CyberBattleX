@@ -51,6 +51,7 @@ import Workflow from './pages/Workflow'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import Signup from './pages/Signup'  
+import GameModules from './pages/Gamemodules'
 import './App.css'
 
 function App() {
@@ -77,7 +78,8 @@ function App() {
         <Route path="/workflow" element={<Workflow />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/signup" element={<Signup />} /> {/* ✅ Signup page added */}
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/game-modules" element={<GameModules />} />
       </Routes>
     </>
   )

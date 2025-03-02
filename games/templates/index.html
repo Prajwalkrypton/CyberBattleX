@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberBattleX - Gamified Cybersecurity</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Embedded CyberBattleX CSS -->
+    <style>
+        /* General Body Styling */
+        body {
+            background-color: #0a0a1f !important;
+            color: #b3b3ff !important;
+            font-family: 'Courier New', monospace;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background: rgba(10, 10, 31, 1) !important;
+            border-bottom: 2px solid #6a5acd !important;
+        }
+
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #6a5acd !important;
+        }
+
+        .nav-link {
+            color: #b3b3ff !important;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #9370db !important;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            text-align: center;
+            padding: 100px 20px;
+            background: radial-gradient(circle, rgba(10, 10, 31, 0.9) 10%, rgba(26, 26, 63, 1) 90%);
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #6a5acd !important;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: #b3ffff !important;
+        }
+
+        /* Button Styles */
+        .btn-primary {
+            background-color: #6a5acd !important;
+            border: none !important;
+            color: #fff !important;
+            font-weight: bold;
+            padding: 12px 20px;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary {
+            background-color: transparent !important;
+            border: 2px solid #6a5acd !important;
+            color: #b3b3ff !important;
+            padding: 12px 20px;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #9370db !important;
+            transform: scale(1.05);
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(106, 90, 205, 0.2) !important;
+            transform: scale(1.05);
+        }
+
+        /* Feature Cards */
+        .cyber-card {
+            background: rgba(26, 26, 63, 0.9) !important;
+            border: 2px solid #6a5acd !important;
+            border-radius: 10px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .cyber-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(106, 90, 205, 0.3);
+        }
+
+        .card-title {
+            color: #6a5acd !important;
+        }
+
+        .card-text {
+            color: #ccc !important;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(10, 10, 31, 1) !important;
+            border-top: 2px solid #6a5acd !important;
+            text-align: center;
+            padding: 20px;
+            color: #b3b3ff !important;
+            font-size: 1rem;
+        }
+
+        /* Animations */
+        @keyframes glow {
+            0% { box-shadow: 0 0 5px #6a5acd; }
+            50% { box-shadow: 0 0 20px #6a5acd; }
+            100% { box-shadow: 0 0 5px #6a5acd; }
+        }
+
+        .glow {
+            animation: glow 2s infinite;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">CYBER<span class="accent">BATTLE</span>X</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/dashboard">Dashboard</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="container text-center">
+            <h1 class="hero-title">CYBER<span class="accent">BATTLE</span>X</h1>
+            <p class="hero-subtitle">
+                A Real-Time Attack & Defense Simulation Platform
+            </p>
+            <div>
+                <section class="container mt-5">
+        <h2 class="text-center">Game Modes</h2>
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <div class="cyber-card" onclick="location.href='ddos.html';" style="cursor: pointer;">
+                    <h3 class="card-title">DDoS Attack</h3>
+                    <p class="card-text">Simulate real-time Distributed Denial of Service attacks and defenses.</p>
+                </div>
+                
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="cyber-card">
+                    <h3 class="card-title">Web Exploit</h3>
+                    <p class="card-text">Explore vulnerabilities and exploit them in a controlled environment.</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="cyber-card">
+                    <h3 class="card-title">Malware Analysis</h3>
+                    <p class="card-text">Analyze and defend against malware in real-time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <!-- <section class="container mt-5">
+        <h2 class="text-center">Game Modes</h2>
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <div class="cyber-card">
+                    <h3 class="card-title">DDoS Attack</h3>
+                    <p class="card-text">Simulate real-time Distributed Denial of Service attacks and defenses.</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="cyber-card">
+                    <h3 class="card-title">Web Exploit</h3>
+                    <p class="card-text">Explore vulnerabilities and exploit them in a controlled environment.</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="cyber-card">
+                    <h3 class="card-title">Malware Analysis</h3>
+                    <p class="card-text">Analyze and defend against malware in real-time.</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 CyberBattleX. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

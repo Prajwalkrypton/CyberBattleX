@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game - Cyber Game</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', path='css/styles.css') }}">
+</head>
+<body class="bg-dark text-light">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Cyber Game</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/dashboard">Dashboard</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Game Interface -->
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Player Details -->
+            <div class="col-md-3">
+                <div class="card bg-secondary text-light mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Player Details</h5>
+                        <p><strong>Team:</strong> <span id="team-name">Cyber Warriors</span></p>
+                        <p><strong>XP:</strong> <span id="xp">1500</span></p>
+                        <p><strong>Role:</strong> <span id="role">Attacker</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Terminal and Logs -->
+            <div class="col-md-9">
+                <div class="card bg-secondary text-light mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Kali Linux Terminal</h5>
+                        <iframe src="http://localhost:3000" width="100%" height="500px" style="border: 2px solid #00ff00;"></iframe>
+                    </div>
+                </div>
+
+                <div class="card bg-secondary text-light">
+                    <div class="card-body">
+                        <h5 class="card-title">Real-Time Logs</h5>
+                        <div id="logs" class="bg-black p-3" style="height: 200px; overflow-y: auto;">
+                            <pre class="text-warning">[System] Game started. Good luck!</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black text-light text-center py-4 mt-5">
+        <p>&copy; 2023 Cyber Game. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

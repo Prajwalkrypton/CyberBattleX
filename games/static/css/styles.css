@@ -1,0 +1,193 @@
+/* ============================= */
+/* CYBERBATTLEX - GLOBAL STYLES */
+/* ============================= */
+
+/* General Body Styling */
+body {
+    background-color: #0a0a1f !important;
+    color: #b3b3ff !important;
+    font-family: 'Courier New', monospace;
+    margin: 0;
+    padding: 0;
+}
+
+/* Fix Text Visibility */
+h1, h2, h3, h4, h5, h6, p, .nav-link, .btn {
+    color: #b3b3ff !important;
+}
+
+/* ============================= */
+/* NAVIGATION BAR */
+/* ============================= */
+.navbar {
+    background: rgba(10, 10, 31, 1) !important;
+    border-bottom: 2px solid #6a5acd !important;
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #6a5acd !important;
+}
+
+.nav-link {
+    color: #b3b3ff !important;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #9370db !important;
+}
+
+/* ============================= */
+/* TERMINAL SECTION */
+/* ============================= */
+#terminal {
+    background-color: #06061b;
+    border: 2px solid #6a5acd;
+    border-radius: 5px;
+    padding: 10px;
+    height: 300px;
+    overflow-y: auto;
+    font-family: 'Courier New', monospace;
+    color: #b3b3ff;
+}
+
+#terminal-output {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+#terminal-input {
+    background-color: #06061b;
+    border: 2px solid #6a5acd;
+    color: #b3b3ff;
+    font-family: 'Courier New', monospace;
+    width: 100%;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+#terminal-input:focus {
+    border-color: #9370db;
+    box-shadow: 0 0 5px #6a5acd;
+    outline: none;
+}
+
+/* ============================= */
+/* LOGS STYLES */
+/* ============================= */
+#logs {
+    background-color: #06061b;
+    border: 2px solid #6a5acd;
+    border-radius: 5px;
+    padding: 10px;
+    height: 200px;
+    overflow-y: auto;
+    font-family: 'Courier New', monospace;
+    color: #ffcc00;
+}
+
+/* ============================= */
+/* CARD STYLES */
+/* ============================= */
+.card {
+    background: rgba(26, 26, 63, 0.9) !important;
+    border: 2px solid #6a5acd !important;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 15px #6a5acd;
+}
+
+.card-title {
+    color: #6a5acd !important;
+}
+
+.card-text {
+    color: #ccc !important;
+}
+
+/* ============================= */
+/* BUTTON STYLES */
+/* ============================= */
+.btn-primary {
+    background-color: #6a5acd !important;
+    border: none !important;
+    color: #fff !important;
+    font-weight: bold;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary {
+    background-color: #333 !important;
+    border: 2px solid #6a5acd !important;
+    color: #b3b3ff !important;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #9370db !important;
+    transform: scale(1.05);
+}
+
+.btn-secondary:hover {
+    background-color: #444 !important;
+    transform: scale(1.05);
+}
+
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+footer {
+    background: rgba(10, 10, 31, 1) !important;
+    border-top: 2px solid #6a5acd !important;
+    text-align: center;
+    padding: 20px;
+    color: #b3b3ff !important;
+    font-size: 1rem;
+}
+
+/* ============================= */
+/* ANIMATIONS */
+/* ============================= */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px #6a5acd;
+    }
+    50% {
+        box-shadow: 0 0 20px #6a5acd;
+    }
+    100% {
+        box-shadow: 0 0 5px #6a5acd;
+    }
+}
+
+.glow {
+    animation: glow 2s infinite;
+}
+
+/* ============================= */
+/* RESPONSIVE DESIGN */
+/* ============================= */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .card {
+        margin-bottom: 15px;
+    }
+
+    #terminal, #logs {
+        height: 200px;
+    }
+}
